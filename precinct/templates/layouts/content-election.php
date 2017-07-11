@@ -2,13 +2,8 @@
 <div 
   class="single single-election postid-27 logged-in ballot new-local-election-2017"
   style="background: #fff;" 
-
-><!-- ### Remove this ###-->
-
+>
 <article <?php post_class(); ?>>
-
-  <!-- #<p><small>### templates/layouts/content-election.php ###</small></p>-->
-
 
   <div class="entry-summary">
     <?php
@@ -24,7 +19,8 @@
       // Show results
       get_template_part('/templates/layouts/results');
     }
-    //return false;
+    // Without the return statement below, the site will always show the ballot, even after the election is over
+    return false;
 
     /**
      * When election is live

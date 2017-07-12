@@ -14,6 +14,11 @@ $custom = get_post_meta($election_id, '_cmb_custom_contests', true);
 $referenda = get_post_meta($election_id, '_cmb_included_referenda', true);
 $issues = get_post_meta($election_id, '_cmb_custom_questions', true);
 
+// if (!is_array($issues)) {
+// //   echo gettype($issues);
+//   $issues = array();
+// }
+
 array_unshift($issues, [
     'title' => 'Life Skills',
     'question' => 'Do you think North Carolina\'s curriculum should include more life skill courses?'
